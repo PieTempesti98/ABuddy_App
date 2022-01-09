@@ -1,0 +1,32 @@
+.root {
+    -fx-background-color: #fefefa;
+    -fx-background-image: url("images.png");
+}
+
+.title {
+    -fx-font-family: Avenir-bold;
+    -fx-font-size: 80;
+    -fx-text-fill: #111b35;
+    -fx-min-width: 200;
+    -fx-text-alignment: CENTER;
+    -fx-alignment: CENTER;
+    -fx-font-weight: BOLD;
+
+}
+
+.button {
+    -fx-font-size: 24;
+    -fx-min-width: 250;
+    -fx-height: 30;
+    -fx-font-family: Avenir-bold;
+    -fx-background-radius: 15;
+    -fx-background-border-color: #2f97ce;
+    -fx-background-color: #fefefa;
+    -fx-text-fill: #2f97ce;
+
+}
+
+.vbox {
+    -fx-max-width: 200;
+    -fx-alignment: CENTER;
+}

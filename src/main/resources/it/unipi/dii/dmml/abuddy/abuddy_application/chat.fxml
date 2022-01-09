@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="it.unipi.dii.dmml.abuddy.abuddy_application.controller.ChatController"
+            stylesheets="@stylesheets/chat.css">
+
+    <Label
+            styleClass="title"
+            AnchorPane.topAnchor="10"
+            AnchorPane.leftAnchor="10"
+            AnchorPane.rightAnchor="10"
+            fx:id="welcome"
+    />
+    <VBox alignment="CENTER"
+          spacing="20"
+          AnchorPane.topAnchor="100"
+          AnchorPane.leftAnchor="10"
+          AnchorPane.rightAnchor="10"
+    >
+        <HBox alignment="CENTER" spacing="10">
+            <Button text="Go back" onAction="#goback" styleClass="goback"/>
+            <Button text="Logout" onAction="#logout" styleClass="logout"/>
+        </HBox>
+        <ScrollPane vbarPolicy="AS_NEEDED" maxHeight="580">
+            <VBox fx:id="contentRoot" spacing="10" alignment="CENTER" minWidth="550"/>
+        </ScrollPane>
+        <HBox spacing="20" alignment="CENTER">
+            <TextField fx:id="newMessage" styleClass="field" />
+            <Button text="Send" onAction="#send" styleClass="send" />
+        </HBox>
+        <HBox spacing="10" alignment="CENTER">
+            <Button text="Refresh chat" onAction="#refreshBoard" styleClass="refresh"/>
+            <Button text="Leave group" onAction="#leave" styleClass="leave"/>
+        </HBox>
+        <Label fx:id="errorMessage" />
+    </VBox>
+
+
+</AnchorPane>

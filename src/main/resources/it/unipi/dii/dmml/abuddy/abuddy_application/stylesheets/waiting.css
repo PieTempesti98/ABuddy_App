@@ -1,0 +1,37 @@
+.root {
+    -fx-font-family: Avenir-bold;
+    -fx-font-size: 24;
+    -fx-background-color: #fefefa;
+}
+.label{
+    -fx-font-size: 40;
+    -fx-text-fill: #44d7a8;
+    -fx-min-width: 200;
+    -fx-text-alignment: CENTER;
+    -fx-alignment: CENTER;
+}
+
+.goback {
+    -fx-min-width: 200;
+    -fx-font-family: Avenir-bold;
+    -fx-background-radius: 15;
+    -fx-background-color: #44d7a8;
+    -fx-text-fill: #fefefa;
+    -fx-padding: 10;
+}
+.refresh {
+    -fx-min-width: 200;
+    -fx-font-family: Avenir-bold;
+    -fx-background-radius: 15;
+    -fx-background-color: #008080;
+    -fx-text-fill: #fefefa;
+    -fx-padding: 10;
+}
+.logout {
+    -fx-min-width: 200;
+    -fx-font-family: Avenir-bold;
+    -fx-background-radius: 15;
+    -fx-background-color: #de3163;
+    -fx-text-fill: #fefefa;
+    -fx-padding: 10;
+}

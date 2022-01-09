@@ -1,0 +1,76 @@
+.root {
+    -fx-font-family: Avenir;
+    -fx-font-size: 24;
+}
+
+.mess-sent {
+    -fx-alignment: CENTER;
+    -fx-background-color: #ffe4e1;
+    -fx-background-radius: 15;
+}
+
+.mess-recv {
+    -fx-alignment: CENTER;
+    -fx-background-color: #c9ffe5;
+    -fx-background-radius: 15;
+}
+
+.author {
+    -fx-font-size: 12;
+    -fx-text-alignment: LEFT;
+}
+
+.timestamp {
+    -fx-font-size: 12;
+    -fx-text-alignment: RIGHT;
+}
+
+.title {
+    -fx-font-family: Avenir;
+    -fx-font-size: 36;
+    -fx-text-fill: #008080;
+    -fx-min-width: 200;
+    -fx-text-alignment: CENTER;
+    -fx-alignment: CENTER;
+}
+
+
+.field {
+    -fx-width: 290;
+    -fx-background-radius: 15;
+}
+
+.send {
+    -fx-min-width: 100;
+    -fx-background-color: #44d7a8;
+    -fx-text-fill: #fefefa;
+    -fx-background-radius: 15;
+}
+
+.leave {
+    -fx-min-width: 185;
+    -fx-background-color: #de3163;
+    -fx-text-fill: #fefefa;
+    -fx-background-radius: 15;
+}
+
+.goback {
+    -fx-min-width: 185;
+    -fx-background-color: #44d7a8;
+    -fx-text-fill: #fefefa;
+    -fx-background-radius: 15;
+}
+
+.refresh {
+    -fx-min-width: 185;
+    -fx-background-color: #008080;
+    -fx-text-fill: #fefefa;
+    -fx-background-radius: 15;
+}
+
+.logout {
+    -fx-min-width: 185;
+    -fx-background-color: #de3163;
+    -fx-text-fill: #fefefa;
+    -fx-background-radius: 15;
+}

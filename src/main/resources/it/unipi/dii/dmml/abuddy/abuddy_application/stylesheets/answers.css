@@ -1,0 +1,62 @@
+.root {
+    -fx-font-family: Avenir-bold;
+    -fx-font-size: 12;
+    -fx-background-color: #fefefa;
+}
+
+.title {
+    -fx-font-family: Avenir-bold;
+    -fx-font-size: 20;
+    -fx-text-fill: #111b35;
+    -fx-min-width: 200;
+    -fx-text-alignment: CENTER;
+    -fx-alignment: CENTER;
+    -fx-font-weight: BOLD;
+
+}
+
+.uni{
+
+    -fx-max-width: 200;
+    -fx-background-radius: 15;
+}
+
+.label {
+
+    -fx-background-radius: 15;
+    -fx-text-fill: #2f97ce;
+    -fx-font-size: 15;
+    -fx-border-insets: 5px;
+    -fx-padding: 5;
+}
+
+
+.title {
+    -fx-font-family: Avenir-bold;
+    -fx-font-size: 36;
+    -fx-text-fill: #111b35;
+    -fx-min-width: 200;
+    -fx-text-alignment: CENTER;
+    -fx-alignment: CENTER;
+}
+
+.goback {
+    -fx-min-width: 185;
+    -fx-font-family: Avenir-bold;
+    -fx-background-radius: 15;
+    -fx-background-color: #2f97ce;
+    -fx-text-fill: #fefefa;
+}
+
+.submit {
+    -fx-min-width: 185;
+    -fx-font-family: Avenir-bold;
+    -fx-background-radius: 15;
+    -fx-background-color: #111b35;
+    -fx-text-fill: #fefefa;
+}
+
+.check-box {
+    -fx-min-width: 200;
+    -fx-background-radius: 15;
+}

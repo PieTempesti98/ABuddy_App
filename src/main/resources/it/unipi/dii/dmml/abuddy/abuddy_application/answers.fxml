@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.collections.FXCollections?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="it.unipi.dii.dmml.abuddy.abuddy_application.controller.AnswerController"
+            stylesheets="@stylesheets/answers.css">
+    <Label styleClass="title"           AnchorPane.topAnchor="10"
+           AnchorPane.leftAnchor="10"
+           AnchorPane.rightAnchor="10"> FORM </Label>
+    <VBox spacing="10"
+          AnchorPane.topAnchor="70"
+          AnchorPane.leftAnchor="10"
+          AnchorPane.rightAnchor="10">
+    <ScrollPane fx:id="scrollPane" vbarPolicy="ALWAYS" maxHeight="700" maxWidth="580" >
+            <VBox alignment="CENTER_LEFT" spacing="5" >
+                <Label styleClass="label">Gender</Label>
+                <ComboBox styleClass="label" fx:id="gender">
+                    <items >
+                        <FXCollections  fx:factory="observableArrayList">
+                            <String fx:value="Female"/>
+                            <String fx:value="Male"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Label>Age</Label>
+                <ComboBox styleClass="label" fx:id="age">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="18-24"/>
+                            <String fx:value="25-30"/>
+                            <String fx:value="30"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Label>Year</Label>
+                <ComboBox styleClass="label" fx:id="levelYear">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="First"/>
+                            <String fx:value="Second"/>
+                            <String fx:value="Third"/>
+                            <String fx:value="Fourth"/>
+                            <String fx:value="Fifth"/>
+                            <String fx:value="Other"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Label>University</Label>
+                <TextField styleClass="uni" fx:id="university"/>
+                <Label>Your cumulative average</Label>
+                <ComboBox styleClass="label" fx:id="average">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="50-"/>
+                            <String fx:value="50-59"/>
+                            <String fx:value="60-69"/>
+                            <String fx:value="70-79"/>
+                            <String fx:value="80-89"/>
+                            <String fx:value="90+"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Label>Before COVID-19: Which of the following digital tools do you use most frequently?</Label>
+                <ComboBox styleClass="label" fx:id="quest11">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Mobile Phone"/>
+                            <String fx:value="Laptop"/>
+                            <String fx:value="Other"/>
+                            <String fx:value="iPad/Tablet"/>
+                            <String fx:value="Personal Computer"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox >
+                <Label>After COVID-19: Which of the following digital tools do you use most frequently?</Label>
+                <ComboBox styleClass="label" fx:id="quest12">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Mobile Phone"/>
+                            <String fx:value="Laptop"/>
+                            <String fx:value="Other"/>
+                            <String fx:value="iPad/Tablet"/>
+                            <String fx:value="Personal Computer"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Label>Before COVID 19: How many hours do you spend using the digital tools you usually use per day?
+                </Label>
+                <ComboBox styleClass="label" fx:id="quest13">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="1-3"/>
+                            <String fx:value="3-6"/>
+                            <String fx:value="6-9"/>
+                            <String fx:value="9-12"/>
+                            <String fx:value="12"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Label>After COVID 19: How many hours do you spend using the digital tools you usually use per day?
+                </Label>
+                <ComboBox styleClass="label" fx:id="quest14">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="1-3"/>
+                            <String fx:value="3-6"/>
+                            <String fx:value="6-9"/>
+                            <String fx:value="9-12"/>
+                            <String fx:value="12"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Label>Before COVID 19: I always use digital tools (mobile, laptop, i-pad) in studying.</Label>
+                <ComboBox styleClass="label"  fx:id="quest15">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Strongly Disagree"/>
+                            <String fx:value="Disagree"/>
+                            <String fx:value="Uncertain"/>
+                            <String fx:value="Agree"/>
+                            <String fx:value="Strongly Agree"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Label>After COVID 19: I always use digital tools (mobile, laptop, i-pad) in studying.</Label>
+                <ComboBox styleClass="label" fx:id="quest16">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Strongly Disagree"/>
+                            <String fx:value="Disagree"/>
+                            <String fx:value="Uncertain"/>
+                            <String fx:value="Agree"/>
+                            <String fx:value="Strongly Agree"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Label>Before COVID 19: When I use the mobile phone, tablet or laptop in e-learning, I cannot
+                    concentrate and I am distracted.
+                </Label>
+                <ComboBox styleClass="label" fx:id="quest17">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Strongly Disagree"/>
+                            <String fx:value="Disagree"/>
+                            <String fx:value="Uncertain"/>
+                            <String fx:value="Agree"/>
+                            <String fx:value="Strongly Agree"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Label>After COVID 19: When I use the mobile phone, tablet or laptop in e-learning, I cannot concentrate
+                    and I am distracted.
+                </Label>
+
+                <ComboBox styleClass="label" fx:id="quest18">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Strongly Disagree"/>
+                            <String fx:value="Disagree"/>
+                            <String fx:value="Uncertain"/>
+                            <String fx:value="Agree"/>
+                            <String fx:value="Strongly Agree"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Label>Before COVID-19: I have fixed hours for bedtime and wake-up.</Label>
+                <ComboBox styleClass="label" fx:id="quest19">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Strongly Disagree"/>
+                            <String fx:value="Disagree"/>
+                            <String fx:value="Uncertain"/>
+                            <String fx:value="Agree"/>
+                            <String fx:value="Strongly Agree"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Label>After COVID-19: I have fixed hours for bedtime and wake-up.</Label>
+                <ComboBox styleClass="label" fx:id="quest20">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Strongly Disagree"/>
+                            <String fx:value="Disagree"/>
+                            <String fx:value="Uncertain"/>
+                            <String fx:value="Agree"/>
+                            <String fx:value="Strongly Agree"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Label>Before COVID-19: Prolonged use of digital tools for learning (mobile, laptop, i-pad) affected my
+                    sleeping habits.
+                </Label>
+
+                <ComboBox styleClass="label" fx:id="quest21">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Strongly Disagree"/>
+                            <String fx:value="Disagree"/>
+                            <String fx:value="Uncertain"/>
+                            <String fx:value="Agree"/>
+                            <String fx:value="Strongly Agree"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox><Label>After COVID-19: Prolonged use of digital tools for learning (mobile, laptop, i-pad) affected my
+                    sleeping habits.
+                </Label>
+
+                <ComboBox styleClass="label" fx:id="quest22">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Strongly Disagree"/>
+                            <String fx:value="Disagree"/>
+                            <String fx:value="Uncertain"/>
+                            <String fx:value="Agree"/>
+                            <String fx:value="Strongly Agree"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox><Label>Before COVID-19: Continuous exposure to electronic screens in online learning is tiring and
+                    exhausting.
+                </Label>
+                <ComboBox styleClass="label" fx:id="quest23">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Strongly Disagree"/>
+                            <String fx:value="Disagree"/>
+                            <String fx:value="Uncertain"/>
+                            <String fx:value="Agree"/>
+                            <String fx:value="Strongly Agree"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Label>After COVID-19: Continuous exposure to electronic screens in online learning is tiring and
+                    exhausting.
+                </Label>
+                <ComboBox styleClass="label" fx:id="quest24">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Strongly Disagree"/>
+                            <String fx:value="Disagree"/>
+                            <String fx:value="Uncertain"/>
+                            <String fx:value="Agree"/>
+                            <String fx:value="Strongly Agree"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Label>The distance learning system, caused by the COVID-19 pandemic, resulted in social distancing.
+                </Label>
+                <ComboBox styleClass="label" fx:id="quest25">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Strongly Disagree"/>
+                            <String fx:value="Disagree"/>
+                            <String fx:value="Uncertain"/>
+                            <String fx:value="Agree"/>
+                            <String fx:value="Strongly Agree"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Label>Prolonged use of digital tools (mobile, laptop, i-pad) causes students’ isolation.</Label>
+                <ComboBox styleClass="label" fx:id="quest26">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Strongly Disagree"/>
+                            <String fx:value="Disagree"/>
+                            <String fx:value="Uncertain"/>
+                            <String fx:value="Agree"/>
+                            <String fx:value="Strongly Agree"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Label>University learning contributes to strengthening the social personality of students.</Label>
+                <ComboBox styleClass="label" fx:id="quest27">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Strongly Disagree"/>
+                            <String fx:value="Disagree"/>
+                            <String fx:value="Uncertain"/>
+                            <String fx:value="Agree"/>
+                            <String fx:value="Strongly Agree"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Label>Staying home for long periods of time leads to lethargy and laziness.</Label>
+                <ComboBox styleClass="label" fx:id="quest28">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Strongly Disagree"/>
+                            <String fx:value="Disagree"/>
+                            <String fx:value="Uncertain"/>
+                            <String fx:value="Agree"/>
+                            <String fx:value="Strongly Agree"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Label>Prolonged use of e-learning tools often leads to boredom, nervousness, and tension.</Label>
+                <ComboBox styleClass="label" fx:id="quest29">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Strongly Disagree"/>
+                            <String fx:value="Disagree"/>
+                            <String fx:value="Uncertain"/>
+                            <String fx:value="Agree"/>
+                            <String fx:value="Strongly Agree"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Label>The psychological element is a key factor in the success of the educational process.</Label>
+                <ComboBox styleClass="label"  fx:id="quest30">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Strongly Disagree"/>
+                            <String fx:value="Disagree"/>
+                            <String fx:value="Uncertain"/>
+                            <String fx:value="Agree"/>
+                            <String fx:value="Strongly Agree"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Label>Some students cannot afford buying all necessary digital tools, which is embarrassing and
+                    frustrating.
+                </Label>
+                <ComboBox styleClass="label" fx:id="quest31">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Strongly Disagree"/>
+                            <String fx:value="Disagree"/>
+                            <String fx:value="Uncertain"/>
+                            <String fx:value="Agree"/>
+                            <String fx:value="Strongly Agree"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Label>I don’t recommend continuing with the online learning model because it is socially and
+                    psychologically unhealthy.
+                </Label>
+                <ComboBox styleClass="label" fx:id="quest32">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Strongly Disagree"/>
+                            <String fx:value="Disagree"/>
+                            <String fx:value="Uncertain"/>
+                            <String fx:value="Agree"/>
+                            <String fx:value="Strongly Agree"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Label>Measures of lockdown, closures, and quarantine, brought by COVID-19 caused stress, frustration,
+                    and depression.
+                </Label>
+                <ComboBox styleClass="label" fx:id="quest33">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Strongly Disagree"/>
+                            <String fx:value="Disagree"/>
+                            <String fx:value="Uncertain"/>
+                            <String fx:value="Agree"/>
+                            <String fx:value="Strongly Agree"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Label>Use of digital learning tools is responsible for my low academic performance.</Label>
+                <ComboBox styleClass="label" fx:id="quest34">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Strongly Disagree"/>
+                            <String fx:value="Disagree"/>
+                            <String fx:value="Uncertain"/>
+                            <String fx:value="Agree"/>
+                            <String fx:value="Strongly Agree"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Label>The volume of assignments via e-learning led to confusion, frustration and poor performance.
+                </Label>
+                <ComboBox styleClass="label" fx:id="quest35">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Strongly Disagree"/>
+                            <String fx:value="Disagree"/>
+                            <String fx:value="Uncertain"/>
+                            <String fx:value="Agree"/>
+                            <String fx:value="Strongly Agree"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Label>Face-to-face interaction contributes significantly to boosting students’ academic achievement.
+                </Label>
+                <ComboBox styleClass="label" fx:id="quest36">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Strongly Disagree"/>
+                            <String fx:value="Disagree"/>
+                            <String fx:value="Uncertain"/>
+                            <String fx:value="Agree"/>
+                            <String fx:value="Strongly Agree"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Label>Taking quizzes and exams online from home was not comfortable and made me nervous.</Label>
+                <ComboBox styleClass="label" fx:id="quest37">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Strongly Disagree"/>
+                            <String fx:value="Disagree"/>
+                            <String fx:value="Uncertain"/>
+                            <String fx:value="Agree"/>
+                            <String fx:value="Strongly Agree"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+
+            </VBox>
+    </ScrollPane>
+        <HBox spacing="10">
+            <Button styleClass="submit" text="Submit" onAction="#submit"/>
+            <Button styleClass="goback" text="Go back" onAction="#goback" />
+        </HBox>
+    </VBox>
+
+</AnchorPane>

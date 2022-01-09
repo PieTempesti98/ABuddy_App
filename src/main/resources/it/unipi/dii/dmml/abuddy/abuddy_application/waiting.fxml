@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="it.unipi.dii.dmml.abuddy.abuddy_application.controller.WaitingController"
+            prefHeight="400.0" prefWidth="600.0" stylesheets="@stylesheets/waiting.css"
+>
+    <VBox alignment="CENTER"
+          AnchorPane.topAnchor="80"
+          AnchorPane.leftAnchor="10"
+          AnchorPane.rightAnchor="10">
+        <Label styleClass="label">WAITING FOR</Label>
+        <Label styleClass="label">A GROUP...</Label>
+        <Label/>
+    </VBox>
+    <VBox alignment="CENTER"
+          spacing="20"
+          AnchorPane.topAnchor="280"
+          AnchorPane.leftAnchor="10"
+          AnchorPane.rightAnchor="10">
+        <Button styleClass="refresh" text="REFRESH" onAction="#refresh"/>
+        <Button styleClass="goback" text="GO BACK" onAction="#goback"/>
+        <Button styleClass="logout" text="LOGOUT" onAction="#logout"/>
+    </VBox>
+
+</AnchorPane>

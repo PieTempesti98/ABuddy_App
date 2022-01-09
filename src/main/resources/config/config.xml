@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<it.unipi.dii.dmml.abuddy.abuddy_application.ParamConfig>
+    <ip>localhost</ip>
+    <port>3306</port>
+    <username>root</username>
+    <dbname>ABuddy</dbname>
+    <datasetPath>./data.csv</datasetPath>
+    <adminUsername>admin</adminUsername>
+    <adminPassword>admin</adminPassword>
+</it.unipi.dii.dmml.abuddy.abuddy_application.ParamConfig>
