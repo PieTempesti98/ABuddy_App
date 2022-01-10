@@ -150,6 +150,8 @@ public class DatabaseUtils {
        String queryUpdate = "UPDATE user SET clusterId = ? WHERE username = ? ";
 
         int startingPoint = getMaxNumCluster();
+        if(startingPoint > 0)
+            startingPoint++;
 
         openJDBCConnection();
 

@@ -1,9 +1,17 @@
 package it.unipi.dii.dmml.abuddy.abuddy_application.config;
 
 import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.*;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 public class ParameterConfig {
 
@@ -15,6 +23,7 @@ public class ParameterConfig {
     private static String dbname;
     private static String adminUsername;
     private static String adminPassword;
+    private static String lastCluster;
 
     static {
 
@@ -50,7 +59,7 @@ public class ParameterConfig {
             dbname = doc.getElementsByTagName("dbname").item(0).getTextContent();
             adminUsername = doc.getElementsByTagName("adminUsername").item(0).getTextContent();
             adminPassword = doc.getElementsByTagName("adminPassword").item(0).getTextContent();
-
+            lastCluster = doc.getElementsByTagName("lastCluster").item(0).getTextContent();
 
         }
 
@@ -86,7 +95,79 @@ public class ParameterConfig {
         return adminPassword;
     }
 
+    public static String getLastCluster() {
+        return lastCluster;
+    }
 
+    public static void setLastCluster(String cluster){lastCluster = cluster;}
+
+    public static void saveToXML() {
+        String xml = "src/main/resources/config/config.xml";
+        Document dom;
+        Element e = null;
+
+        // instance of a DocumentBuilderFactory
+        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+        try {
+            // use factory to get an instance of document builder
+            DocumentBuilder db = dbf.newDocumentBuilder();
+            // create instance of DOM
+            dom = db.newDocument();
+
+            // create the root element
+            Element rootEle = dom.createElement("it.unipi.dii.dmml.abuddy.abuddy_application.ParamConfig");
+
+            // create data elements and place them under root
+            e = dom.createElement("ip");
+            e.appendChild(dom.createTextNode(ip));
+            rootEle.appendChild(e);
+
+            e = dom.createElement("port");
+            e.appendChild(dom.createTextNode(port));
+            rootEle.appendChild(e);
+
+            e = dom.createElement("username");
+            e.appendChild(dom.createTextNode(username));
+            rootEle.appendChild(e);
+
+            e = dom.createElement("dbname");
+            e.appendChild(dom.createTextNode(dbname));
+            rootEle.appendChild(e);
+
+            e = dom.createElement("lastCluster");
+            e.appendChild(dom.createTextNode(lastCluster));
+            rootEle.appendChild(e);
+
+            e = dom.createElement("adminUsername");
+            e.appendChild(dom.createTextNode(adminUsername));
+            rootEle.appendChild(e);
+
+            e = dom.createElement("adminPassword");
+            e.appendChild(dom.createTextNode(adminPassword));
+            rootEle.appendChild(e);
+
+            dom.appendChild(rootEle);
+
+            try {
+                Transformer tr = TransformerFactory.newInstance().newTransformer();
+                tr.setOutputProperty(OutputKeys.INDENT, "yes");
+                tr.setOutputProperty(OutputKeys.METHOD, "xml");
+                tr.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
+                tr.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
+
+                // send DOM to file
+                tr.transform(new DOMSource(dom),
+                        new StreamResult(new FileOutputStream(xml)));
+
+            } catch (TransformerException te) {
+                System.out.println(te.getMessage());
+            } catch (IOException ioe) {
+                System.out.println(ioe.getMessage());
+            }
+        } catch (ParserConfigurationException pce) {
+            System.out.println("UsersXML: Error trying to instantiate DocumentBuilder " + pce);
+        }
+    }
 
 
 

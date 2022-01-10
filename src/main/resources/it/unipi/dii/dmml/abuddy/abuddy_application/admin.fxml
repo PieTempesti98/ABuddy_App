@@ -20,9 +20,11 @@
           AnchorPane.rightAnchor="10">
 
         <Label styleClass="label">ADMIN PAGE</Label>
+        <Label styleClass="date-cluster" fx:id="dateCluster" />
 
         <Button text="Force cluster" onAction="#forceCluster" styleClass="forceCluster"/>
         <Button text="Logout" onAction="#logout" styleClass="logout"/>
+        <Label fx:id="output" />
 
     </VBox>
 </AnchorPane>
