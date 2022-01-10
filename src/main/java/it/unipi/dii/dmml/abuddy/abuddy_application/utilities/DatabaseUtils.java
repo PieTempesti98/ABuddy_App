@@ -427,4 +427,40 @@ public class DatabaseUtils {
 
     }
 
+    public static int getNumberOfUsers(int clusterId){
+
+        int nUsers = 0;
+
+        ResultSet rs = null;
+        openJDBCConnection();
+
+        String queryStmt = "SELECT count(*) as count FROM user WHERE clusterID = ?";
+
+
+        try(PreparedStatement pstmt = connection.prepareStatement(queryStmt)) {
+
+            pstmt.setInt(1,clusterId);
+
+            rs = pstmt.executeQuery();
+            while(rs.next())
+            {
+                nUsers = rs.getInt("count");
+
+
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        finally {
+            if(rs != null)
+            {
+                try { rs.close(); }catch (SQLException ignored){}
+                closeJDBCConnection();
+            }
+
+        }
+        return nUsers;
+
+    }
+
 }

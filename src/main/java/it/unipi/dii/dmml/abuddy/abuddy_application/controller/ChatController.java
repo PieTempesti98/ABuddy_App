@@ -12,6 +12,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -24,6 +25,7 @@ public class ChatController implements Initializable {
     public TextField newMessage;
     public Label errorMessage;
     public Label welcome;
+    public Label nUsers;
     private User sessionUser;
 
 
@@ -32,12 +34,14 @@ public class ChatController implements Initializable {
         sessionUser = InfoSession.getSession();
         welcome.setText("Hello, " + sessionUser.getFullName());
         uploadMessages(0);
+        setNumUsers();
 
     }
 
     public void refreshBoard(ActionEvent actionEvent) {
         long timestamp = System.currentTimeMillis();
         uploadMessages(timestamp);
+        setNumUsers();
 
     }
 
@@ -101,5 +105,12 @@ public class ChatController implements Initializable {
     public void goback(ActionEvent actionEvent) {
 
         Utils.goBackToMain(actionEvent);
+    }
+
+    private void setNumUsers(){
+
+        int users = DatabaseUtils.getNumberOfUsers(sessionUser.getClusterId());
+        nUsers.setText("There are " + users + " buddies here!");
+
     }
 }

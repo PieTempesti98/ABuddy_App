@@ -6,21 +6,28 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import javafx.scene.text.Text?>
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="it.unipi.dii.dmml.abuddy.abuddy_application.controller.ChatController"
             stylesheets="@stylesheets/chat.css">
 
-    <Label
-            styleClass="title"
-            AnchorPane.topAnchor="10"
-            AnchorPane.leftAnchor="10"
-            AnchorPane.rightAnchor="10"
-            fx:id="welcome"
-    />
+
+
+    <Label fx:id="welcome" styleClass="title"
+                           AnchorPane.topAnchor="10"
+                           AnchorPane.leftAnchor="10"
+                           AnchorPane.rightAnchor="10"/>
+
+    <Label fx:id="nUsers" styleClass="users"
+                           AnchorPane.topAnchor="75"
+                           AnchorPane.leftAnchor="10"
+                           AnchorPane.rightAnchor="10"
+                           textAlignment="CENTER"/>
+
     <VBox alignment="CENTER"
           spacing="20"
-          AnchorPane.topAnchor="100"
+          AnchorPane.topAnchor="140"
           AnchorPane.leftAnchor="10"
           AnchorPane.rightAnchor="10"
     >

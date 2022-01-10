@@ -1,6 +1,7 @@
 .root {
     -fx-font-family: Avenir;
     -fx-font-size: 24;
+    -fx-background-color: #fefefa;
 }
 
 .mess-sent {
@@ -27,8 +28,8 @@
 
 .title {
     -fx-font-family: Avenir;
-    -fx-font-size: 36;
-    -fx-text-fill: #008080;
+    -fx-font-size: 42;
+    -fx-text-fill: #111b35;
     -fx-min-width: 200;
     -fx-text-alignment: CENTER;
     -fx-alignment: CENTER;
@@ -42,9 +43,19 @@
 
 .send {
     -fx-min-width: 100;
-    -fx-background-color: #44d7a8;
+    -fx-background-color: #008080;
     -fx-text-fill: #fefefa;
     -fx-background-radius: 15;
+}
+
+.users{
+
+    -fx-font-size: 30;
+    -fx-text-fill: #008080;
+    -fx-font-family: Avenir;
+    -fx-text-alignment: CENTER;
+    -fx-alignment: CENTER;
+
 }
 
 .leave {
@@ -56,14 +67,14 @@
 
 .goback {
     -fx-min-width: 185;
-    -fx-background-color: #44d7a8;
+    -fx-background-color: #2f97ce;
     -fx-text-fill: #fefefa;
     -fx-background-radius: 15;
 }
 
 .refresh {
     -fx-min-width: 185;
-    -fx-background-color: #008080;
+    -fx-background-color: #111b35;
     -fx-text-fill: #fefefa;
     -fx-background-radius: 15;
 }

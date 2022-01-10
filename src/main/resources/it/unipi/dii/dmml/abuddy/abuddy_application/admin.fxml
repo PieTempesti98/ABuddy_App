@@ -19,7 +19,7 @@
           AnchorPane.leftAnchor="10"
           AnchorPane.rightAnchor="10">
 
-        <Label styleClass="label">Admin page</Label>
+        <Label styleClass="label">ADMIN PAGE</Label>
 
         <Button text="Force cluster" onAction="#forceCluster" styleClass="forceCluster"/>
         <Button text="Logout" onAction="#logout" styleClass="logout"/>

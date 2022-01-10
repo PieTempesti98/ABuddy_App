@@ -5,7 +5,7 @@
 }
 .label{
     -fx-font-size: 40;
-    -fx-text-fill: #44d7a8;
+    -fx-text-fill:  #2f97ce;
     -fx-min-width: 200;
     -fx-text-alignment: CENTER;
     -fx-alignment: CENTER;
@@ -15,7 +15,7 @@
     -fx-min-width: 200;
     -fx-font-family: Avenir-bold;
     -fx-background-radius: 15;
-    -fx-background-color: #44d7a8;
+    -fx-background-color:  #2f97ce;
     -fx-text-fill: #fefefa;
     -fx-padding: 10;
 }
@@ -23,7 +23,7 @@
     -fx-min-width: 200;
     -fx-font-family: Avenir-bold;
     -fx-background-radius: 15;
-    -fx-background-color: #008080;
+    -fx-background-color: #111b35;
     -fx-text-fill: #fefefa;
     -fx-padding: 10;
 }
