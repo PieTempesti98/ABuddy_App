@@ -35,6 +35,10 @@ public class AdminController implements Initializable {
             int instances = kvalid.load_dataset();
             if(instances <= 1) {
                 output.setText("Error: people to cluster are not enough.");
+
+                if(!output.getStyleClass().isEmpty())
+                    output.getStyleClass().clear();
+
                 output.getStyleClass().add("error");
                 return;
             }
@@ -43,6 +47,10 @@ public class AdminController implements Initializable {
             assignements = kvalid.getAssignements(eval);
             DatabaseUtils.assignCluster(assignements);
             output.setText("Successfully clustered " + instances + " people!");
+
+            if(!output.getStyleClass().isEmpty())
+                output.getStyleClass().clear();
+
             output.getStyleClass().add("success");
             String newDate = new SimpleDateFormat("yyyy-MM-dd").format(new Date(System.currentTimeMillis()));
             ParameterConfig.setLastCluster(newDate);
