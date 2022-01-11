@@ -10,13 +10,13 @@ We want to cluster individuals based on the answer of a quick survey so that the
 
 ### How does ABuddy work?
 
-![home page](presentation images/home.png)
+![home page](https://github.com/PieTempesti98/ABuddy_App/blob/master/presentation%20images/home.png)
 
-![Sign in and compile the form](presentation images/form.png)
+![Sign in and compile the form](https://github.com/PieTempesti98/ABuddy_App/blob/master/presentation%20images/form.png)
 
-![Login and start to chat](presentation images/login.png)
+![Login and start to chat](https://github.com/PieTempesti98/ABuddy_App/blob/master/presentation%20images/login.png)
 
-![Administration features](presentation images/admin.png)
+![Administration features](https://github.com/PieTempesti98/ABuddy_App/blob/master/presentation%20images/admin.png)
 
 ## Repository organization
 The application is composed by one module, which implements the user interface, the logical behaviours, the database collections and the ML tasks.
