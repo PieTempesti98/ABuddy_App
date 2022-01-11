@@ -3,7 +3,24 @@
     -fx-font-size: 24;
     -fx-background-color: #fefefa;
 }
-.label{
+
+.dateCluster{
+
+    -fx-font-size: 30;
+    -fx-text-fill: #2f97ce;
+
+}
+
+.success{
+    -fx-font-size: 30;
+    -fx-text-fill: #008080;
+}
+
+.error{
+    -fx-text-fill: #de3163;
+    -fx-font-size: 30;
+}
+.labeladmin{
     -fx-font-size: 40;
     -fx-text-fill: #111b35;
     -fx-min-width: 200;

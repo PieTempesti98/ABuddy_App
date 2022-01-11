@@ -59,7 +59,7 @@ public class KValid_Clusterer {
 
         //Clusterer setup
         kv = new KValid();
-        kv.setMinimumK(10);
+        kv.setMinimumK(2);
         kv.setMaximumK(100);
         kv.setCascade(true);
         kv.setInitializationMethod(new SelectedTag(SimpleKMeans.KMEANS_PLUS_PLUS,

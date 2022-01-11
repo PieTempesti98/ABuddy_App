@@ -19,8 +19,8 @@
           AnchorPane.leftAnchor="10"
           AnchorPane.rightAnchor="10">
 
-        <Label styleClass="label">ADMIN PAGE</Label>
-        <Label styleClass="date-cluster" fx:id="dateCluster" />
+        <Label styleClass="labeladmin">ADMIN PAGE</Label>
+        <Label styleClass="dateCluster" fx:id="dateCluster" />
 
         <Button text="Force cluster" onAction="#forceCluster" styleClass="forceCluster"/>
         <Button text="Logout" onAction="#logout" styleClass="logout"/>
