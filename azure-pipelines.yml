@@ -10,7 +10,6 @@ pool:
   name: default
   demands:
   - agent.name -equals ntt-unipi-agent
-  vmImage: ubuntu-latest
 
 steps:
 - task: Maven@3
